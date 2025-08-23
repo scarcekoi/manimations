@@ -1,0 +1,8 @@
+# This file is used internally by FFMPEG.
+file 'file:/home/scarcekoi/Repositories/manimations/media/videos/musicNotationTest/1080p60/partial_movie_files/MusicNotationAnimation/3529212410_860102923_223132457.mp4'
+file 'file:/home/scarcekoi/Repositories/manimations/media/videos/musicNotationTest/1080p60/partial_movie_files/MusicNotationAnimation/3040924799_3877221521_3757869185.mp4'
+file 'file:/home/scarcekoi/Repositories/manimations/media/videos/musicNotationTest/1080p60/partial_movie_files/MusicNotationAnimation/3040924799_510559553_387629679.mp4'
+file 'file:/home/scarcekoi/Repositories/manimations/media/videos/musicNotationTest/1080p60/partial_movie_files/MusicNotationAnimation/3040924799_908703309_2508898093.mp4'
+file 'file:/home/scarcekoi/Repositories/manimations/media/videos/musicNotationTest/1080p60/partial_movie_files/MusicNotationAnimation/3040924799_1839128356_3412037647.mp4'
+file 'file:/home/scarcekoi/Repositories/manimations/media/videos/musicNotationTest/1080p60/partial_movie_files/MusicNotationAnimation/3040924799_3213335572_3555774941.mp4'
+file 'file:/home/scarcekoi/Repositories/manimations/media/videos/musicNotationTest/1080p60/partial_movie_files/MusicNotationAnimation/3040924799_2408024828_2383590718.mp4'

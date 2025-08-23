@@ -1,0 +1,9 @@
+# This file is used internally by FFMPEG.
+file 'file:/home/scarcekoi/Repositories/manimations/media/videos/parts_of_an_equation_brace/480p15/partial_movie_files/BracesEquation/1185818338_1016417885_223132457.mp4'
+file 'file:/home/scarcekoi/Repositories/manimations/media/videos/parts_of_an_equation_brace/480p15/partial_movie_files/BracesEquation/624642324_3201849554_2992596323.mp4'
+file 'file:/home/scarcekoi/Repositories/manimations/media/videos/parts_of_an_equation_brace/480p15/partial_movie_files/BracesEquation/624642324_1194596136_1060748399.mp4'
+file 'file:/home/scarcekoi/Repositories/manimations/media/videos/parts_of_an_equation_brace/480p15/partial_movie_files/BracesEquation/624642324_542249383_1155249288.mp4'
+file 'file:/home/scarcekoi/Repositories/manimations/media/videos/parts_of_an_equation_brace/480p15/partial_movie_files/BracesEquation/624642324_3903757852_1050775042.mp4'
+file 'file:/home/scarcekoi/Repositories/manimations/media/videos/parts_of_an_equation_brace/480p15/partial_movie_files/BracesEquation/624642324_4138204049_2921923866.mp4'
+file 'file:/home/scarcekoi/Repositories/manimations/media/videos/parts_of_an_equation_brace/480p15/partial_movie_files/BracesEquation/624642324_327418024_3043846727.mp4'
+file 'file:/home/scarcekoi/Repositories/manimations/media/videos/parts_of_an_equation_brace/480p15/partial_movie_files/BracesEquation/624642324_2408024828_4038263060.mp4'

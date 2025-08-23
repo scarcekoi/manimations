@@ -1,0 +1,5 @@
+# This file is used internally by FFMPEG.
+file 'file:/home/scarcekoi/Repositories/manimations/media/videos/musicNotationTest/1080p60/partial_movie_files/MusicNoteExample/3529212410_2853256542_223132457.mp4'
+file 'file:/home/scarcekoi/Repositories/manimations/media/videos/musicNotationTest/1080p60/partial_movie_files/MusicNoteExample/3040924799_4126984294_844240166.mp4'
+file 'file:/home/scarcekoi/Repositories/manimations/media/videos/musicNotationTest/1080p60/partial_movie_files/MusicNoteExample/3040924799_1192805271_2034335195.mp4'
+file 'file:/home/scarcekoi/Repositories/manimations/media/videos/musicNotationTest/1080p60/partial_movie_files/MusicNoteExample/3040924799_1754310298_697008194.mp4'

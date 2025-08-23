@@ -1,0 +1,8 @@
+# This file is used internally by FFMPEG.
+file 'file:/home/scarcekoi/Repositories/manimations/media/videos/musicTest/1080p60/partial_movie_files/ViolinClefMusicAnimation/3529212410_1669167122_223132457.mp4'
+file 'file:/home/scarcekoi/Repositories/manimations/media/videos/musicTest/1080p60/partial_movie_files/ViolinClefMusicAnimation/3040924799_2119769155_4048645717.mp4'
+file 'file:/home/scarcekoi/Repositories/manimations/media/videos/musicTest/1080p60/partial_movie_files/ViolinClefMusicAnimation/3040924799_364316660_1838716153.mp4'
+file 'file:/home/scarcekoi/Repositories/manimations/media/videos/musicTest/1080p60/partial_movie_files/ViolinClefMusicAnimation/3040924799_1587881868_2192579474.mp4'
+file 'file:/home/scarcekoi/Repositories/manimations/media/videos/musicTest/1080p60/partial_movie_files/ViolinClefMusicAnimation/3040924799_3201849554_2762656846.mp4'
+file 'file:/home/scarcekoi/Repositories/manimations/media/videos/musicTest/1080p60/partial_movie_files/ViolinClefMusicAnimation/3040924799_2066386818_2790462095.mp4'
+file 'file:/home/scarcekoi/Repositories/manimations/media/videos/musicTest/1080p60/partial_movie_files/ViolinClefMusicAnimation/3040924799_2408024828_637690909.mp4'
