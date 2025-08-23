@@ -1,7 +1,0 @@
-# This file is used internally by FFMPEG.
-file 'file:/home/scarcekoi/Repositories/manimations/media/videos/math/3840p240/partial_movie_files/MathScene/2567312942_2481260420_223132457.mp4'
-file 'file:/home/scarcekoi/Repositories/manimations/media/videos/math/3840p240/partial_movie_files/MathScene/3386768361_3201849554_3584909443.mp4'
-file 'file:/home/scarcekoi/Repositories/manimations/media/videos/math/3840p240/partial_movie_files/MathScene/3386768361_4198059126_3519696636.mp4'
-file 'file:/home/scarcekoi/Repositories/manimations/media/videos/math/3840p240/partial_movie_files/MathScene/3386768361_3201849554_903383286.mp4'
-file 'file:/home/scarcekoi/Repositories/manimations/media/videos/math/3840p240/partial_movie_files/MathScene/3386768361_3485076297_2368103417.mp4'
-file 'file:/home/scarcekoi/Repositories/manimations/media/videos/math/3840p240/partial_movie_files/MathScene/3386768361_1839128356_18019870.mp4'
