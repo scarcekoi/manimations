@@ -1,16 +1,16 @@
 from manim import *
 from catppuccin import PALETTE
 
-mocha = PALETTE.mocha
-macchiato = PALETTE.macchiato
-frappe = PALETTE.frappe
-latte = PALETTE.latte
+mocha = PALETTE.mocha.colors
+macchiato = PALETTE.macchiato.colors
+frappe = PALETTE.frappe.colors
+latte = PALETTE.latte.colors
 
 class demo(Scene):
     def construct(self):
-        s = Circle(radius=0.5, stroke_width=10, color=mocha.colors.red.hex, fill_opacity=0.3)
-        r = SurroundingRectangle(s, color=mocha.colors.blue.hex, corner_radius=0.1)
-        t = Text("Manim", color=mocha.colors.text.hex).next_to(r, UP, buff=0.5)
+        s = Circle(radius=0.5, stroke_width=10, color=mocha.red.hex, fill_opacity=0.3)
+        r = SurroundingRectangle(s, color=mocha.blue.hex, corner_radius=0.1)
+        t = Text("Manim", color=mocha.text.hex).next_to(r, UP, buff=0.5)
 
         self.play(Write(s))
         self.play(DrawBorderThenFill(r))

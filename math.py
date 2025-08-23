@@ -76,3 +76,68 @@ class two(Scene):
         self.play(l.numbers[2].animate.set_color(mocha.text.hex), Unwrite(l))
         self.play(Unwrite(e))
         self.wait(0.5)
+
+class three(Scene):
+    def construct(self):
+        def color_numbers(number_line, color):
+            for num in number_line.numbers:
+                num.set_color(color)
+        
+        e0 = MathTex(r"-3\le2x-1<5", color=mocha.text.hex)
+        e1 = MathTex(r"-3+1\le2x-1+1<5+1", color=mocha.text.hex)
+        e2 = MathTex(r"-2\le2x-1+1<5+1", color=mocha.text.hex)
+        e3 = MathTex(r"-2\le2x<5+1", color=mocha.text.hex)
+        e4 = MathTex(r"-2\le2x<6", color=mocha.text.hex)
+        e5 = MathTex(r"\frac{-2}{2}\le\frac{2x}{2}<\frac{6}{2}", color=mocha.text.hex)
+        e6 = MathTex(r"-2\le\frac{2x}{2}<\frac{6}{2}", color=mocha.text.hex)
+        e7 = MathTex(r"-2\le x<\frac{6}{2}", color=mocha.text.hex)
+        e8 = MathTex(r"-1\le x<3", color=mocha.text.hex)
+        e9 = MathTex(r"x\in[-1,3)", color=mocha.text.hex)
+
+        for e in [e0, e1, e2, e3, e4, e5, e6, e7, e8, e9]:
+            e.scale(1.5)
+
+        l = NumberLine(
+            x_range=[-2, 4, 1],
+            length=8 * 1.5,
+            color=mocha.text.hex,
+            include_numbers=True,
+            label_direction=DOWN
+        )
+        color_numbers(l, mocha.text.hex)
+        l.next_to(e0, DOWN, buff=1.5)
+
+        left_dot = Dot(l.n2p(-1), color=mocha.blue.hex).scale(1.5)
+        right_dot = Dot(l.n2p(3), color=mocha.blue.hex).scale(1.5)
+        right_dot.set_fill(color=mocha.blue.hex, opacity=0)  # open circle
+        interval_line = Line(l.n2p(-1), l.n2p(3), color=mocha.blue.hex, stroke_width=6*1.5)
+
+        self.play(Write(e0))
+        self.wait(1)
+        self.play(Transform(e0, e1))
+        self.wait(1)
+        self.play(Transform(e0, e2))
+        self.wait(1)
+        self.play(Transform(e0, e3))
+        self.wait(1)
+        self.play(Transform(e0, e4))
+        self.wait(1)
+        self.play(Transform(e0, e5))
+        self.wait(1)
+        self.play(Transform(e0, e6))
+        self.wait(1)
+        self.play(Transform(e0, e7))
+        self.wait(1)
+        self.play(Transform(e0, e8))
+        self.wait(1)
+        self.play(e0.animate.shift(UP*1.5), Write(e9.shift(UP*2.5)))
+        self.wait(0.5)
+        self.play(Create(l))
+        self.wait(1)
+        self.play(Create(interval_line), FadeIn(left_dot), FadeIn(right_dot))
+        self.wait(2)
+
+        self.play(Uncreate(interval_line), FadeOut(left_dot), FadeOut(right_dot))
+        self.play(Uncreate(l))
+        self.play(Unwrite(e0), Unwrite(e9))
+        self.wait(1)
