@@ -31,7 +31,7 @@ class one(Scene):
         self.play(Transform(p, e))
         self.wait(1)
 
-class two_fast(Scene):
+class two(Scene):
     def construct(self):
         def color_numbers(number_line, color):
             for num in number_line.numbers:
@@ -65,11 +65,17 @@ class two_fast(Scene):
         )
 
         self.play(Transform(e, e1))
+        self.wait(1)
         self.play(Transform(e, e2))
+        self.wait(1)
         self.play(Transform(e, e3))
+        self.wait(1)
         self.play(Transform(e, e4))
+        self.wait(1)
         self.play(e.animate.shift(UP))
+        self.wait(1)
         self.play(Write(l))
+        self.wait(1)
         self.play(l.numbers[2].animate.set_color(mocha.blue.hex))
         self.play(Create(oc), GrowArrow(a))
         self.wait(5)
