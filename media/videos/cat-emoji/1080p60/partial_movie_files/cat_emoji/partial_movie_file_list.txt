@@ -1,0 +1,4 @@
+# This file is used internally by FFMPEG.
+file 'file:/home/scarcekoi/Repositories/manimations/media/videos/cat-emoji/1080p60/partial_movie_files/cat_emoji/4018626047_2926319301_213497187.mp4'
+file 'file:/home/scarcekoi/Repositories/manimations/media/videos/cat-emoji/1080p60/partial_movie_files/cat_emoji/3958471318_2149617975_213497187.mp4'
+file 'file:/home/scarcekoi/Repositories/manimations/media/videos/cat-emoji/1080p60/partial_movie_files/cat_emoji/3606914088_2968904986_3489904690.mp4'
