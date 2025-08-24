@@ -5,6 +5,7 @@ build/
 dist/
 wheels/
 *.egg-info
+/emojis
 
 # Virtual environments
 .venv
