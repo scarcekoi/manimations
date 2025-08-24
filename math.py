@@ -171,6 +171,9 @@ class four(Scene):
         self.wait(1.2)
 
 class five(Scene):
+<<<<<<< HEAD
+    def construct(self):
+=======
     def construct(self):
         # Top text
         t = Paragraph(
@@ -255,3 +258,4 @@ class five(Scene):
         self.play(Write(t, run_time=5))
         self.wait(10)
         moving_dot.remove_updater(update_dot)
+>>>>>>> 4963ecc (feat(five): 2 generals problem)
