@@ -137,25 +137,35 @@ class three(Scene):
 
 class four(Scene):
     def construct(self):
-        eq = MathTex("1", "+", "1", "=").scale(2)
-        self.play(Write(eq))
-        self.wait(1)
-
-        square = Square(side_length=3)
-        left_line = Line(square.get_bottom() + LEFT*1.5, square.get_top() + LEFT*1.5)
-        right_line = Line(square.get_bottom() + RIGHT*1.5, square.get_top() + RIGHT*1.5)
-        middle_v = Line(square.get_bottom(), square.get_top())
-        middle_h = Line(square.get_left(), square.get_right())
-        top_line = Line(square.get_left(), square.get_right()).shift(UP*1.5)
-        bottom_line = Line(square.get_left(), square.get_right()).shift(DOWN*1.5)
-
+        eq = MathTex("1", "+", "1", "=", color=mocha.text.hex).scale(2)
         one_left, plus, one_right, equal = eq
 
+        self.play(Write(eq))
+        self.wait(0.6)
+
+        top = MathTex("-", color=mocha.text.hex).scale(4)
+        bottom = MathTex("-", color=mocha.text.hex).scale(4)
+
+        top.stretch(1.1, 0)
+        bottom.stretch(1.1, 0)
+
+        top.move_to(plus.get_top() + UP * 0.3)
+        bottom.move_to(plus.get_bottom() + DOWN * 0.3)
+
+        left_target = MathTex("|", color=mocha.text.hex).scale(3)
+        left_target.stretch(0.9, 1)
+        right_target = MathTex("|", color=mocha.text.hex).scale(3)
+        right_target.stretch(0.9, 1)
+        left_target.move_to(plus.get_left() + LEFT * 0.3)
+        right_target.move_to(plus.get_right() + RIGHT * 0.3)
+
         self.play(
-            Transform(one_left, left_line),
-            Transform(plus, VGroup(middle_v, middle_h)),
-            Transform(one_right, right_line),
-            Transform(equal, VGroup(top_line, bottom_line))
+            Transform(one_left, left_target),
+            Transform(one_right, right_target),
+            plus.animate.scale(2),
+            Transform(equal, VGroup(top, bottom)),
+            run_time=1.2,
+            rate_func=smooth,
         )
 
-        self.wait(2)
+        self.wait(1.2)
