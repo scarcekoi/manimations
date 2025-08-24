@@ -137,15 +137,25 @@ class three(Scene):
 
 class four(Scene):
     def construct(self):
-        eq = MathTex("1", "+", "1").scale(2)
+        eq = MathTex("1", "+", "1", "=").scale(2)
         self.play(Write(eq))
         self.wait(1)
 
-        outer_square = Square(side_length=3)
-        vertical = Line(outer_square.get_top(), outer_square.get_bottom())
-        horizontal = Line(outer_square.get_left(), outer_square.get_right())
+        square = Square(side_length=3)
+        left_line = Line(square.get_bottom() + LEFT*1.5, square.get_top() + LEFT*1.5)
+        right_line = Line(square.get_bottom() + RIGHT*1.5, square.get_top() + RIGHT*1.5)
+        middle_v = Line(square.get_bottom(), square.get_top())
+        middle_h = Line(square.get_left(), square.get_right())
+        top_line = Line(square.get_left(), square.get_right()).shift(UP*1.5)
+        bottom_line = Line(square.get_left(), square.get_right()).shift(DOWN*1.5)
 
-        one_left, plus, one_right = eq
+        one_left, plus, one_right, equal = eq
 
-        self.play(Transform(one_left, vertical), Transform(one_right, horizontal), Transform(plus, outer_square))
+        self.play(
+            Transform(one_left, left_line),
+            Transform(plus, VGroup(middle_v, middle_h)),
+            Transform(one_right, right_line),
+            Transform(equal, VGroup(top_line, bottom_line))
+        )
+
         self.wait(2)
