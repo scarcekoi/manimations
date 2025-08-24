@@ -169,3 +169,89 @@ class four(Scene):
         )
 
         self.wait(1.2)
+
+class five(Scene):
+    def construct(self):
+        # Top text
+        t = Paragraph(
+            "Positions of the armies.",
+            "Armies A1 and A2 cannot see one another directly,",
+            "so need to communicate by messengers,",
+            "but their messengers may be captured by army B.",
+            color=mocha.text.hex
+        ).scale(0.5).to_edge(UP)
+
+        # Horizontal shift for the whole wave
+        x_shift = -4
+
+        # Sine wave (no axes)
+        graph = VMobject()
+        graph_points = [np.array([x + x_shift, np.sin(2*x), 0]) for x in np.linspace(0, 3*PI, 200)]
+        graph.set_points_smoothly(graph_points)
+        graph.set_color(mocha.blue.hex)
+
+        # Valleys projected to y=0
+        x1 = 3*PI/4 + x_shift
+        x2 = 7*PI/4 + x_shift
+        x3 = 11*PI/4 + x_shift
+        valley_dots = [
+            Dot([x1, 0, 0], color=mocha.red.hex),
+            Dot([x2, 0, 0], color=mocha.red.hex),
+            Dot([x3, 0, 0], color=mocha.red.hex)
+        ]
+        labels = [
+            MathTex("A1").next_to(valley_dots[0], DOWN),
+            MathTex("B").next_to(valley_dots[1], DOWN),
+            MathTex("A2").next_to(valley_dots[2], DOWN)
+        ]
+
+        # Moving dot and label
+        moving_dot = Dot([0 + x_shift, 0, 0], color=mocha.peach.hex)
+        message_label = always_redraw(
+            lambda: MathTex("Message", color=mocha.peach.hex).next_to(moving_dot, DOWN)
+        )
+
+        self.add(graph, *valley_dots, *labels, moving_dot, message_label)
+
+        # Dot movement along wave
+        speed_factor = 0.1
+        def update_dot(dot, dt):
+            if not hasattr(dot, "time"):
+                dot.time = 0
+                dot.direction = 1
+                dot.disappeared = False  # Track if dot + label disappeared
+
+            # Stop moving if disappeared
+            if dot.disappeared:
+                dot.set_opacity(0)
+                return
+
+            dot.time += dt * dot.direction * speed_factor
+
+            # Forward direction
+            if dot.time >= 1:
+                dot.time = 1
+                dot.direction = -1
+
+            # Backward direction
+            if dot.time <= 0:
+                dot.time = 0
+                dot.direction = 1
+
+            # Map time to x
+            x_val = dot.time * 3*PI + x_shift
+            y_val = np.sin(2*(dot.time * 3*PI))
+            dot.move_to([x_val, y_val, 0])
+
+            # Disappear dot + label at B on the first trip (going right)
+            if dot.direction == 1 and not dot.disappeared and abs(x_val - x2) < 0.05:
+                dot.disappeared = True
+                dot.set_opacity(0)
+                message_label.set_opacity(0)
+
+        moving_dot.add_updater(update_dot)
+
+        # Animate
+        self.play(Write(t, run_time=5))
+        self.wait(10)
+        moving_dot.remove_updater(update_dot)
