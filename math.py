@@ -172,11 +172,11 @@ class four(Scene):
 
 class five(Scene):
     def construct(self):
-        e0 = MathTex(r"x\times y=z").scale(4)
-        e1 = MathTex(r"xy=z").scale(4)
-        e2 = MathTex(r"\frac{xy}{y}=\frac{z}{y}").scale(4)
-        e3 = MathTex(r"x=\frac{z}{y}").scale(4)
-        e4 = MathTex(r"z=xy").scale(4)
+        e0 = MathTex(r"x\times y=z", color=mocha.text.hex).scale(4)
+        e1 = MathTex(r"xy=z", color=mocha.text.hex).scale(4)
+        e2 = MathTex(r"\frac{xy}{y}=\frac{z}{y}", color=mocha.text.hex).scale(4)
+        e3 = MathTex(r"x=\frac{z}{y}", color=mocha.text.hex).scale(4)
+        e4 = MathTex(r"z=xy", color=mocha.text.hex).scale(4)
 
         self.play(Write(e0))
         self.play(Transform(e0, e1))
@@ -186,4 +186,8 @@ class five(Scene):
         self.play(Write(e3), e0.animate.to_edge(DOWN), e3.animate.to_edge(UP))
         self.wait(1)
         self.play(Unwrite(e0), Unwrite(e3))
+        self.wait()
+
+class six(Scene):
+    def construct(self):
         self.wait()
