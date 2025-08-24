@@ -111,7 +111,7 @@ class three(Scene):
 
         left_dot = Dot(l.n2p(-1), color=mocha.blue.hex).scale(1.5)
         right_dot = Dot(l.n2p(3), color=mocha.blue.hex).scale(1.5)
-        right_dot.set_fill(color=mocha.blue.hex, opacity=0)  # open circle
+        right_dot.set_fill(color=mocha.blue.hex, opacity=0)
         interval_line = Line(l.n2p(-1), l.n2p(3), color=mocha.blue.hex, stroke_width=6*1.5)
 
         self.play(Write(e0))
@@ -137,4 +137,15 @@ class three(Scene):
 
 class four(Scene):
     def construct(self):
+        eq = MathTex("1", "+", "1").scale(2)
+        self.play(Write(eq))
         self.wait(1)
+
+        outer_square = Square(side_length=3)
+        vertical = Line(outer_square.get_top(), outer_square.get_bottom())
+        horizontal = Line(outer_square.get_left(), outer_square.get_right())
+
+        one_left, plus, one_right = eq
+
+        self.play(Transform(one_left, vertical), Transform(one_right, horizontal), Transform(plus, outer_square))
+        self.wait(2)
