@@ -190,4 +190,24 @@ class five(Scene):
 
 class six(Scene):
     def construct(self):
+        e0 = MathTex(r"\frac{45}{3}-27\Big(5\times\big[7\times4\big]\Big)>67", color=mocha.text.hex)
+        e1 = MathTex(r"15-27\Big(5\times\big[7\times4\big]\Big)>67", color=mocha.text.hex)
+        e2 = MathTex(r"15-27\Big(5\times28\Big)>67", color=mocha.text.hex)
+        e3 = MathTex(r"15-27\times140>67", color=mocha.text.hex)
+        e4 = MathTex(r"15-3780>67", color=mocha.text.hex)
+        e5 = MathTex(r"-3765>67", color=mocha.text.hex)
+        e6 = MathTex(r"\frac{45}{3}-27\Big(5\times\big[7\times4\big]\Big)>67", color=mocha.text.hex)
+        t = Text("False", color=mocha.text.hex)
+        t1 = Text("Is", color=mocha.text.hex)
+
+        self.play(Write(e0))
+        self.play(Transform(e0, e1))
+        self.play(Transform(e0, e2))
+        self.play(Transform(e0, e3))
+        self.play(Transform(e0, e4))
+        self.play(Transform(e0, e5))
+        self.play(Write(t.shift(UP)), Write(e6.shift(UP*3)), Write(t1.shift(UP*2)))
+        self.play(t.animate.set_color(mocha.red.hex))
+        self.wait()
+        self.play(Unwrite(e0), Unwrite(t), Unwrite(t1), Unwrite(e6))
         self.wait()

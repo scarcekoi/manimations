@@ -1,0 +1,12 @@
+# This file is used internally by FFMPEG.
+file 'file:/home/scarcekoi/Repositories/manimations/media/videos/math/1080p60/partial_movie_files/six/1456720228_2396799024_223132457.mp4'
+file 'file:/home/scarcekoi/Repositories/manimations/media/videos/math/1080p60/partial_movie_files/six/1032017712_4293465430_2134418465.mp4'
+file 'file:/home/scarcekoi/Repositories/manimations/media/videos/math/1080p60/partial_movie_files/six/1032017712_274576351_2134418465.mp4'
+file 'file:/home/scarcekoi/Repositories/manimations/media/videos/math/1080p60/partial_movie_files/six/1032017712_2902238492_2134418465.mp4'
+file 'file:/home/scarcekoi/Repositories/manimations/media/videos/math/1080p60/partial_movie_files/six/1032017712_4051379477_2134418465.mp4'
+file 'file:/home/scarcekoi/Repositories/manimations/media/videos/math/1080p60/partial_movie_files/six/1032017712_2192308955_2134418465.mp4'
+file 'file:/home/scarcekoi/Repositories/manimations/media/videos/math/1080p60/partial_movie_files/six/1032017712_2126710329_1358319355.mp4'
+file 'file:/home/scarcekoi/Repositories/manimations/media/videos/math/1080p60/partial_movie_files/six/1032017712_843414098_499228961.mp4'
+file 'file:/home/scarcekoi/Repositories/manimations/media/videos/math/1080p60/partial_movie_files/six/1032017712_1754310298_2065537500.mp4'
+file 'file:/home/scarcekoi/Repositories/manimations/media/videos/math/1080p60/partial_movie_files/six/1032017712_1313148984_2774815298.mp4'
+file 'file:/home/scarcekoi/Repositories/manimations/media/videos/math/1080p60/partial_movie_files/six/1032017712_1754310298_210259938.mp4'
