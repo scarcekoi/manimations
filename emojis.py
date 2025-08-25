@@ -4,7 +4,7 @@ from catppuccin import PALETTE
 
 mocha = PALETTE.mocha.colors
 
-class TransformEmojis(MovingCameraScene):
+class transform_emojis(MovingCameraScene):
     def construct(self):
         self.camera.background_color = mocha.crust.hex
 
@@ -22,5 +22,5 @@ class TransformEmojis(MovingCameraScene):
 
         for next_emoji in emojis[1:]:
             next_emoji.move_to([x_center, y_center, 0])
-            self.play(Transform(current, next_emoji), run_time=0.5)
+            self.play(Transform(current, next_emoji), run_time=0.1)
             self.wait(0.1)

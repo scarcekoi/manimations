@@ -1,6 +1,5 @@
 from manim import *
 from catppuccin import PALETTE
-from itertools import combinations
 
 mocha = PALETTE.mocha.colors
 
@@ -211,3 +210,26 @@ class six(Scene):
         self.wait()
         self.play(Unwrite(e0), Unwrite(t), Unwrite(t1), Unwrite(e6))
         self.wait()
+
+class seven(Scene):
+    def construct(self):
+        e0 = MathTex(r"73\left(\frac{57}{63}\right)-27=39.0476", color=mocha.text.hex)
+        e1 = MathTex(r"73\left(\frac{19}{21}\right)-27=39.0476", color=mocha.text.hex)
+        e2 = MathTex(r"\frac{73 \cdot 19}{21}-27=39.0476", color=mocha.text.hex)
+        e3 = MathTex(r"\frac{1387}{21}-27=39.0476", color=mocha.text.hex)
+        e4 = MathTex(r"\frac{1387}{21}-\frac{567}{21}=39.0476", color=mocha.text.hex)
+        e5 = MathTex(r"\frac{820}{21}=39.0476", color=mocha.text.hex)
+        e6 = MathTex(r"39.0476=39.0476", color=mocha.text.hex)
+        t = Text("True", color=mocha.text.hex)
+
+        self.play(Write(e0))
+        self.play(Transform(e0, e1))
+        self.play(Transform(e0, e2))
+        self.play(Transform(e0, e3))
+        self.play(Transform(e0, e4))
+        self.play(Transform(e0, e5))
+        self.play(Transform(e0, e6))
+        self.play(Write(t.shift(UP)))
+        self.play(t.animate.set_color(mocha.green.hex))
+        self.wait()
+        self.play(Unwrite(e0), Unwrite(t))
