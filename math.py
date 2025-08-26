@@ -1,4 +1,5 @@
 from manim import *
+from MF_Tools import *
 from catppuccin import PALETTE
 
 mocha = PALETTE.mocha.colors
@@ -202,7 +203,7 @@ class six(Scene):
         self.play(Write(e0))
         self.play(Transform(e0, e1))
         self.play(Transform(e0, e2))
-        self.play(Transform(e0, e3))
+        self.play(TransformByGlyphMap(e0, e3))
         self.play(Transform(e0, e4))
         self.play(Transform(e0, e5))
         self.play(Write(t.shift(UP)), Write(e6.shift(UP*3)), Write(t1.shift(UP*2)))
@@ -215,7 +216,7 @@ class seven(Scene):
     def construct(self):
         e0 = MathTex(r"73\left(\frac{57}{63}\right)-27=39.0476", color=mocha.text.hex)
         e1 = MathTex(r"73\left(\frac{19}{21}\right)-27=39.0476", color=mocha.text.hex)
-        e2 = MathTex(r"\frac{73 \cdot 19}{21}-27=39.0476", color=mocha.text.hex)
+        e2 = MathTex(r"\frac{73\times19}{21}-27=39.0476", color=mocha.text.hex)
         e3 = MathTex(r"\frac{1387}{21}-27=39.0476", color=mocha.text.hex)
         e4 = MathTex(r"\frac{1387}{21}-\frac{567}{21}=39.0476", color=mocha.text.hex)
         e5 = MathTex(r"\frac{820}{21}=39.0476", color=mocha.text.hex)
@@ -225,14 +226,35 @@ class seven(Scene):
         self.play(Write(e0))
         self.play(Transform(e0, e1))
         self.play(Transform(e0, e2))
-        self.play(Transform(e0, e3))
-        self.play(Transform(e0, e4))
-        self.play(Transform(e0, e5))
-        self.play(Transform(e0, e6))
+        self.play(TransformByGlyphMap(e2, e3,
+            ([0,2,4,5], [0,1,2,3]),
+            ([3,6], [4]),
+            ([7,8], [5,6]),
+            ([9], [7]),
+            ([10], [8]),
+            ([11], [9]),
+            ([12], [10]),
+            ([13], [11]),
+            ([14], [12]),
+            ([15], [13]),
+            ([5], [4]),
+            ([17], [16])
+        ), FadeOut(e0, scale=0.5, run_time=0.0001))
+        self.play(TransformByGlyphMap(e3, e4,
+        ([8,9], [8,9,10,11,12,13]),
+        ([10], [14]),
+        ([11,12,13,14,15,16,17], [15,16,17,18,19,20,21])
+        ))
+        self.play(TransformByGlyphMap(e4, e5,
+        ([0,1,2,3,4,5,6,7,8,9], [0,1,2,3,4,5]),
+        ([10], [6]),
+        ([11,12,13,14,15,16,17], [7,8,9,10,11,12,13])
+        ))
+        self.play(TransformByGlyphMap(e3, e6))
         self.play(Write(t.shift(UP)))
         self.play(t.animate.set_color(mocha.green.hex))
         self.wait()
-        self.play(Unwrite(e0), Unwrite(t))
+        self.play(Unwrite(e3), Unwrite(t))
 
 class eight(MovingCameraScene):
     def construct(self):
@@ -278,4 +300,8 @@ class eight(MovingCameraScene):
         self.play(Write(a3))
         self.wait()
         self.play(Unwrite(a3))
+        self.wait()
+
+class nine(Scene):
+    def construct(self):
         self.wait()

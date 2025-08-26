@@ -1,0 +1,3 @@
+# This file is used internally by FFMPEG.
+file 'file:/home/scarcekoi/Repositories/manimations/media/videos/science/1080p60/partial_movie_files/DimethylmercuryMolecule/1456720228_872611522_223132457.mp4'
+file 'file:/home/scarcekoi/Repositories/manimations/media/videos/science/1080p60/partial_movie_files/DimethylmercuryMolecule/1032017712_1754310298_898493661.mp4'
