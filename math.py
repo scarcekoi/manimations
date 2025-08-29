@@ -304,4 +304,27 @@ class eight(MovingCameraScene):
 
 class nine(Scene):
     def construct(self):
+        e0 = MathTex(r"100\div\frac{1}{10}\times10")
+
+        pemdas = Text("PEMDAS").scale(1.5)
+
+        # Arrow from M → D (upper-left of M to upper-right of D)
+        arrow_md = Arrow(
+            start=pemdas[2].get_corner(UL) + UP*0.25,
+            end  =pemdas[3].get_corner(UR) + UP*0.25,
+            buff=0.0
+        )
+
+        # Arrow from A → S (upper-left of A to upper-right of S)
+        arrow_as = Arrow(
+            start=pemdas[4].get_corner(UL) + UP*0.25,
+            end  =pemdas[5].get_corner(UR) + UP*0.25,
+            buff=0.0
+        )
+
+        self.play(Write(e0))
+        self.play(e0.animate.to_edge(UP))
+        self.play(Write(pemdas))
+        self.play(pemdas.animate.to_edge(DOWN))
+        self.play(GrowArrow(arrow_md), GrowArrow(arrow_as))
         self.wait()

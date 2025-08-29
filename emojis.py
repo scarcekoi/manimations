@@ -17,10 +17,9 @@ class transform_emojis(MovingCameraScene):
 
         current = emojis[0]
         current.move_to([x_center, y_center, 0])
-        self.add(current)
-        self.wait(0.5)
+        self.play(Write(current))
 
         for next_emoji in emojis[1:]:
             next_emoji.move_to([x_center, y_center, 0])
             self.play(Transform(current, next_emoji), run_time=0.1)
-            self.wait(0.1)
+            self.wait()
